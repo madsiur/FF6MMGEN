@@ -7,7 +7,7 @@ It also does not take into account location masking for the Sealed Gate entrance
 
 I had to sacrifice a color for the Sealed Gate continent, so 2 color are reassignated to color 8. This does not make a significant difference. I had to do this to have a matching location color I would mask, it was a tough choice between the two but figured on a custom map the choice I've made could have been the obvious one to do.
 
-# App usage
+### App usage
 
 Default usage example: ff6mmgen.exe -r romname.smc
 
@@ -20,7 +20,7 @@ The custom example will mask a rectangle on the WOB mini-map when contientrise u
 3. x1 must be smaller than x2
 4. y1 must be smaller than y2
 
-# ROM Area affected
+### ROM Area affected
 
 - $EFE49B-$EFE8B2 	World of Balance Minimap Graphics
 - $EFE8B3-$EFED25 	World of Ruin Minimap Graphics
@@ -28,7 +28,7 @@ The custom example will mask a rectangle on the WOB mini-map when contientrise u
 - $EFFAC8-$EFFBC7 	Palettes for Ending Airship Scene (relocated right after Airship GFX)
 - $EFFBC8-$EFFEEF 	Unused Space (beginning could be used due to data shifting) 
 
-# Code changes
+### Code changes
 
 - $EE9B0E:	NOP
 - $EE9B0F:	JSR $B1F2
@@ -40,7 +40,7 @@ The custom example will mask a rectangle on the WOB mini-map when contientrise u
 - $EEB1F7:	RTS
 
 
-# Palette colors (RAM)
+### Palette colors (RAM)
 
 - M = used on modified mini-maps
 - S = used for Sealed Gate contient
@@ -56,7 +56,7 @@ The custom example will mask a rectangle on the WOB mini-map when contientrise u
 9.  $D2EEB0: location (S)
 10. $D2EEB4: mountain edge, light (M)
 
-# Sealed Gate color switch
+### Sealed Gate color switch
 
 - color 2  -> color 6
 - color 3  -> color 7
@@ -71,19 +71,20 @@ The custom example will mask a rectangle on the WOB mini-map when contientrise u
 - color 1 -> color 8
 - color 1 -> color 9
 
-# Credits
+### Credits
 
 - LeetSketcher for Mini-Map palette findings
 - Yousei for FF3Edit source code (compression and minimap generation)
 - giangurgolo for Zone Doctor source code (Rom and Bits classes)
 
-# Version History
+### Version History
 
 1.0 - 02/28/2017 - Initial release
 
-# Infos
+### Infos
 
 contact: themadsiur@gmail.com
+
 website: http://madsiur.net
 
 
