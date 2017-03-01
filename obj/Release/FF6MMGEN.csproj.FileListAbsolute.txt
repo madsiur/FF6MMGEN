@@ -1,0 +1,6 @@
+C:\Users\Fred\Desktop\FF6MMGEN\FF6MMGEN\bin\Release\FF6MMGEN.exe.config
+C:\Users\Fred\Desktop\FF6MMGEN\FF6MMGEN\bin\Release\FF6MMGEN.exe
+C:\Users\Fred\Desktop\FF6MMGEN\FF6MMGEN\bin\Release\FF6MMGEN.pdb
+C:\Users\Fred\Desktop\FF6MMGEN\FF6MMGEN\obj\Release\FF6MMGEN.csprojResolveAssemblyReference.cache
+C:\Users\Fred\Desktop\FF6MMGEN\FF6MMGEN\obj\Release\FF6MMGEN.exe
+C:\Users\Fred\Desktop\FF6MMGEN\FF6MMGEN\obj\Release\FF6MMGEN.pdb
