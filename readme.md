@@ -1,4 +1,4 @@
-# FF6MMGEN 1.0
+# FF6MMGEN 1.1
 
 
 This small utility does one thing: generating the WOB and WOR mini-maps like FF3Edit does. However, FF3EDit does not take into account a color switch for the Sealed Gate that has different colors in order to mask it with the water color after the continent lifted up.
