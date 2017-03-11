@@ -66,18 +66,22 @@ ID  Offset   Description             Hex value  RGB value
 
 ### Sealed Gate color switch
 
-- color 2  -> color 6
-- color 3  -> color 7
-- color 4  -> color 8
-- color 5  -> color 9
-- color 10 -> color 8
+```
+color 2  -> color 6
+color 3  -> color 7
+color 4  -> color 8
+color 5  -> color 9
+color 10 -> color 8
+```
 
-# RAM color switch
+### RAM color switch
 
-- color 1 -> color 6
-- color 1 -> color 7
-- color 1 -> color 8
-- color 1 -> color 9
+```
+color 1 -> color 6
+color 1 -> color 7
+color 1 -> color 8
+color 1 -> color 9
+```
 
 ### Credits
 
@@ -87,6 +91,7 @@ ID  Offset   Description             Hex value  RGB value
 
 ### Version History
 
+1.1 - 03/10/2017 - Palette tweak, utility exception handling improvements
 1.0 - 02/28/2017 - Initial release
 
 ### Infos
