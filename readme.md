@@ -92,6 +92,7 @@ color 1 -> color 9
 ### Version History
 
 1.1 - 03/10/2017 - Palette tweak, utility exception handling improvements
+
 1.0 - 02/28/2017 - Initial release
 
 ### Infos
