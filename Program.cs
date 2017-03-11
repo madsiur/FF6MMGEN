@@ -45,7 +45,8 @@ namespace FF6MMGEN
         private static readonly int MAP_TRIGGERS = 0xDFBB00;
         private static readonly int EVENT_TRIGGERS = 0xC40000;
         private static readonly int ASM_CODE_A = 0xEE9B0E;
-        private static readonly int ASM_CODE_B = 0xEEB1F2;
+        private static readonly int ASM_CODE_B = 0xEEB1F7;
+        private static readonly int PALETTE_OFF = 0xD2EEA2;
 
         private static readonly string GAMECODE = "C3F6";
 
@@ -54,13 +55,15 @@ namespace FF6MMGEN
         private static readonly int YTOP = 42;
         private static readonly int YBOTTOM = 56;
         
-        private static readonly byte[] asmA = { 0xEA, 0x20, 0xF2, 0xB1, 0x28, 0x60 };
+        private static readonly byte[] asmA = { 0xEA, 0x20, 0xF7, 0xB1, 0x28, 0x60 };
         private static readonly byte[] asmB =
         {
             0x8F, 0xB0, 0xE1, 0x7E,
             0x8F, 0xB2, 0xE1, 0x7E,
             0x60
         };
+
+        private static readonly ushort[] palette = { 0x1084, 0x294A, 0x35AD, 0x4E73, 0x7FFF, 0x294A, 0x35AD, 0x4E73, 0x7FFF, 0x5AD6 };
 
         private static byte[] rom;
         private static byte[] wobMap;
@@ -197,8 +200,13 @@ namespace FF6MMGEN
                         Bits.SetBytes(rom, SmcToAbs(ASM_CODE_A), asmA);
                         Bits.SetBytes(rom, SmcToAbs(ASM_CODE_B), asmB);
 
-                        // Modify palette (location color)
-                        Bits.SetShort(rom, 0x12EEB2, 0x7FFF);
+                        // Modify palette
+                        offset = SmcToAbs(PALETTE_OFF);
+
+                        for(int i = 0; i < palette.Length; i++)
+                        {
+                            Bits.SetShort(rom, offset + i * 2, palette[i]);
+                        }
 
 
                         if (rm.WriteRom())
@@ -208,7 +216,7 @@ namespace FF6MMGEN
                     }
                     catch (Exception e)
                     {
-                        Console.Error.WriteLine("Error! " + e.Message);
+                        Console.Error.WriteLine("Error! " + e.InnerException.Message);
                     }
                 }
             }
