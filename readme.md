@@ -22,22 +22,26 @@ The custom example will mask a rectangle on the WOB mini-map when contientrise u
 
 ### ROM Area affected
 
-- $EFE49B-$EFE8B2 	World of Balance Minimap Graphics
-- $EFE8B3-$EFED25 	World of Ruin Minimap Graphics
-- $EFED26-$EFFAC7 	Daryl's Airship Graphics (relocated right after WOR mini-map)
-- $EFFAC8-$EFFBC7 	Palettes for Ending Airship Scene (relocated right after Airship GFX)
-- $EFFBC8-$EFFEEF 	Unused Space (beginning could be used due to data shifting) 
+```
+$EFE49B-$EFE8B2 	World of Balance Minimap Graphics
+$EFE8B3-$EFED25 	World of Ruin Minimap Graphics
+$EFED26-$EFFAC7 	Daryl's Airship Graphics (relocated right after WOR mini-map)
+$EFFAC8-$EFFBC7 	Palettes for Ending Airship Scene (relocated right after Airship GFX)
+$EFFBC8-$EFFEEF 	Unused Space (beginning could be used due to data shifting)
+```
 
 ### Code changes
 
-- $EE9B0E:	NOP
-- $EE9B0F:	JSR $B1F2
-- $EE9B12:	PLP
-- $EE9B13:	RTS
+```
+$EE9B0E:    NOP
+$EE9B0F:    JSR $B1F7
+$EE9B12:    PLP
+$EE9B13:    RTS
 
-- $EEB1F2:	STA $7EE1B0
-- $EEB1F6:	STA $7EE1B2
-- $EEB1F7:	RTS
+$EEB1F7:    STA $7EE1B0
+$EEB1FB:    STA $7EE1B2
+$EEB1FF:    RTS
+```
 
 
 ### Palette colors (RAM)
@@ -45,16 +49,20 @@ The custom example will mask a rectangle on the WOB mini-map when contientrise u
 - M = used on modified mini-maps
 - S = used for Sealed Gate contient
 
-1.  $D2EEA2: sea (M)
-2.  $D2EEA4: land, dark (M) 
-3.  $D2EEA6: land, medium (M)
-4.  $D2EEA8: mountain edge (M)
-5.  $D2EEAA: location (M)
-6.  $D2EEAC: land, dark (S)
-7.  $D2EEAE: land, medium (S)
-8.  $D2EEB0: mountain edge (S)
-9.  $D2EEB0: location (S)
-10. $D2EEB4: mountain edge, light (M)
+```
+ID  Offset   Description             Hex value  RGB value
+---------------------------------------------------------
+1-  $D2EEA2: sea (M)                  $1084     (4,4,4)
+2-  $D2EEA4: land, dark (M)           $294A     (10,10,10)
+3-  $D2EEA6: land, medium (M)         $35AD     (13,13,13)
+4-  $D2EEA8: mountain edge (M)        $4E73     (19,19,19)
+5-  $D2EEAA: location (M)             $7FFF     (31,31,31)
+6-  $D2EEAC: land, dark (S)           $294A     (10,10,10)
+7-  $D2EEAE: land, medium (S)         $35AD     (13,13,13)
+8-  $D2EEB0: mountain edge (S)        $4E73     (19,19,19)
+9-  $D2EEB0: location (S)             $7FFF     (31,31,31)
+10- $D2EEB4: mountain edge, light (M) $5AD6     (22,22,22)
+```
 
 ### Sealed Gate color switch
 
@@ -87,7 +95,7 @@ contact: themadsiur@gmail.com
 
 website: http://madsiur.net
 
-
+[FF6hacking.com Thread](http://www.ff6hacking.com/forums/showthread.php?tid=3368)
 
 
 
